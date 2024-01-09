@@ -2,13 +2,13 @@ import { useState } from "react";
 
 export default function UserInput() {
   const [userInput, setUserInput] = useState({
-    InitialInvestment: 10000,
+    initialInvestment: 10000,
     annualInvestment: 1200,
     expectedReturn: 6,
     duration: 10,
   });
 
-  function handleChange(newValue, inputIdentifier) {
+  function handleChange(inputIdentifier, newValue) {
     setUserInput((prevUserInput) => {
       return {
         ...prevUserInput,
@@ -25,7 +25,7 @@ export default function UserInput() {
           <input
             type="number"
             required
-            value={userInput.InitialInvestment}
+            value={userInput.initialInvestment}
             onChange={(event) =>
               handleChange("initialInvestment", event.target.value)
             }
@@ -36,7 +36,7 @@ export default function UserInput() {
           <input
             type="number"
             required
-            value={userInput.annualInvestmentInvestment}
+            value={userInput.annualInvestment}
             onChange={(event) =>
               handleChange("annualInvestment", event.target.value)
             }
