@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import Header from './components/Header'
 import './App.css'
 import UserInput from './components/userInput'
+import Result from './components/results'
 
 function App() {
 
@@ -25,7 +26,8 @@ function App() {
   return (
     <>
       <Header/>
-      <UserInput onChangeInput={handleChange}/>
+      <UserInput onChangeInput={handleChange} userInput={userInput}/>
+      <Result input={userInput}/>
     </>
   )
 }
